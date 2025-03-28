@@ -1,0 +1,118 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Manga"
+    },
+    {
+      "id": "2",
+      "name": "Light novel"
+    },
+    {
+      "id": "3",
+      "name": "Văn học Việt Nam"
+    }
+  ],
+  "books": [
+    {
+      "id": "2",
+      "img": "https://i.postimg.cc/NM8HjJX8/feature-2.jpg",
+      "name": "Chúa tể bóng tối - tập 6",
+      "quantity": 6,
+      "sold": 69,
+      "category": "Manga",
+      "description": "Cậu thiếu niên Cid sau khi chuyển sinh sang một thế giới khác vẫn tiếp tục chơi trò nhập vai Chúa tể Bóng tối, can thiệp vào mọi biến cố và bộc lộ sức mạnh thực sự của mình từ trong màn đêm. Sau khi che giấu thân phận để tham dự Đại hội Bushin – sự kiện lớn hằng năm nhằm tìm ra kiếm sĩ mạnh nhất cả nước, Cid lần lượt giành chiến thắng ở các vòng loại dưới danh nghĩa Jimina Seinen. Mục đích chính của cậu không gì khác ngoài “Một tên tôm tép mà ai cũng khinh bỉ, bỗng vài người nhận ra anh ta có gì đó bất thường. Và khi đại hội diễn ra, chàng trai ấy sẽ cho mọi người chiêm ngưỡng sức mạnh tối thượng”!! Dĩ nhiên, đằng sau Đại hội Bushin ấy cũng đang ẩn chứa không ít mưu mô đen tối thực sự…!?",
+      "price": 50000
+    },
+    {
+      "id": "5",
+      "img": "https://i.postimg.cc/PJ2vmC2P/feature-5.jpg",
+      "name": "Hai thằng này cứ nghi nghi - tập 1",
+      "quantity": 20,
+      "sold": 22,
+      "description": "Có hai nhân vật, một tóc ngắn một tóc dài, đầy bí ẩn hay xuất hiện ở công viên nọ. Ngoại hình đáng nghi và khó gần hết sức, thế nhưng tụi nó lại đi nhặt rác, rồi tìm mèo lạc này kia, nói chung là toàn những việc mà người tốt thường làm. Thằng tóc dài chẳng hiểu sao rất am hiểu về tuổi thọ rắn và cơ quan nội tạng của lươn. Thằng tóc ngắn thì chỉ đang ngồi gặm bánh bao thôi mà cũng bị cảnh sát hỏi thăm. Hôm nay cũng vậy, hai cậu chàng vừa tận hưởng cuộc sống theo cách riêng, vừa kéo mọi người trong khu phố vào những (trò nghịch) rắc rối của bản thân.",
+      "category": "Manga",
+      "price": 35000
+    },
+    {
+      "id": "6",
+      "img": "https://i.postimg.cc/m2gHTSgM/feature-6.jpg",
+      "quantity": 34,
+      "sold": 23,
+      "description": "Hạnh phúc đến từ những điều giản dị bình thường trong cuộc sống mà không phải ai cũng thấy được. Ở mỗi căn nhà, hạnh phúc diễn ra theo những cách khác nhau, bình yên, ấm áp. Đây là câu chuyện của 5 người trong 5 căn nhà, với những điều họ hết mực yêu thích khi ở trong căn nhà của mình.",
+      "name": "Hội những người thích ở nhà",
+      "category": "Manga",
+      "price": 70000
+    },
+    {
+      "id": "7",
+      "img": "https://i.postimg.cc/YqDm0mvP/feature-7.jpg",
+      "quantity": 1,
+      "sold": 930,
+      "description": "Maehara Maki tôi đây vốn không có nổi một người bạn xã giao đúng nghĩa, nay đã lần đầu tiên kết thân được với Asanagi Umi. Asanagi được đám con trai đồn là nguời “dễ thương nhì lớp”, luôn quan tâm và hỗ trợ Amami, mĩ nữ No.1 ngây thơ trong sáng… Sau mỗi giờ tan học ngày thứ Sáu, Asanagi lại bí mật đến nhà tôi chơi. Đó là giây phút vui vẻ tôi có cùng cô bạn ấy, người mà sở thích về phim ảnh, game và truyện tranh đều hợp với tôi. Nhìn dáng vẻ nghiêm túc chín chắn thường ngày, thật không thể tưởng tượng ra nét mặt vô tư và tính cách thích làm nũng của cô ấy. “Mau ngồi cạnh tớ đi~, bọn mình cùng đọc truyện tranh”, “Nhưng đây là giường của tớ…”, “Riêng lúc này thôi thì là của tớ. Nào, lại đây đi?” Khoảng cách hơi gần rồi đó, bạn Asanagi?",
+      "name": "Làm bạn với cô nàng dễ thương nhì lớp - tập 1",
+      "category": "Light novel",
+      "price": 105000
+    },
+    {
+      "id": "8",
+      "img": "https://i.postimg.cc/GmBTyhYm/feature-8.jpg",
+      "quantity": 10,
+      "sold": 20,
+      "description": "Câu chuyện về chàng trai ở ngôi làng Phan Long nhỏ bé ven bờ sông Gianh sớm có lòng yêu nước rồi trở thành một tình báo viên trẻ tuổi đã được nhà văn Nguyễn Quang Lập kể lại theo cách đặc biệt của mình. Tình nghĩa, hồn hậu, tận tụy hết lòng với gia đình, bạn bè và mối tình thanh mai trúc mã vừa hé nở; nhưng bản lĩnh, mưu trí, can đảm, bất khuất trước quân thù, người thanh niên ấy đã dâng hiến tuổi thanh xuân cho lí tưởng của mình và trở thành huyền thoại của quê hương.",
+      "name": "Làng ta có một anh hùng",
+      "category": "Văn học Việt Nam",
+      "price": 160000
+    },
+    {
+      "id": "9",
+      "img": "https://product.hstatic.net/200000343865/product/9_3343f22c7a4a4fa9a519f3caaa879f80_master.jpg",
+      "quantity": 10,
+      "sold": 20,
+      "description": "Nhờ có Mahiru, Amane đã cảm nhận được rất nhiều thay đổi trong ngày sinh nhật cậu, và điều đó khiến cậu vô cùng hạnh phúc. Amane cũng muốn dành những gì tốt lành nhất cho Mahiru vào ngày sinh nhật cô, vì vậy mỗi ngày cậu đều tất bật chuẩn bị cho sự kiện đó. Giữa lúc ấy, cả hai bắt đầu bước vào giai đoạn phải suy nghĩ về con đường tương lai của mình. Họ hứa hẹn cùng nhau vượt qua kì thi tuyển sinh và vẽ nên một tương lai mà cả hai có thể ở bên nhau mãi mãi. Cuối cùng, sinh nhật của Mahiru cũng đến. Để khiến ngày này trở nên đặc biệt, Amane đã chuẩn bị một điều bất ngờ...",
+      "name": "Thiên sứ nhà bên - Tập 9",
+      "category": "Light novel",
+      "price": 95000
+    },
+    {
+      "id": "10",
+      "img": "https://product.hstatic.net/200000343865/product/bay-cuu-bay-ngang-thanh-pho_bia_b9c289cf6a3247d0be09b6a839b426fa_master.jpg",
+      "quantity": 10,
+      "sold": 20,
+      "description": "Trên đời cần những nhà thơ. Họ viết để khắc ghi từng khoảnh khắc, để kí ức mãi song hành cùng thời gian. Bởi thời gian trường cửu còn kí ức thì có tuổi, sẽ phôi pha, sẽ già, sẽ tiêu biến tựa ngôi sao băng rơi vào lòng biển, nguội lạnh rồi chìm vĩnh viễn. Còn bé con, bé con chơi với bài thơ. Tháo tung nó ra, sắp xếp lại, rồi lại thổi bay từng chữ vào thinh không như thổi những cánh bồ công anh vào trời rộng.",
+      "name": "Bầy cừu bay ngang thành phố",
+      "category": "Văn học Việt Nam",
+      "price": 40000
+    },
+    {
+      "id": "11",
+      "name": "Đất rừng phương Nam",
+      "img": "https://product.hstatic.net/200000343865/product/-nam_532d0fa40aab482f85159ed6a3b654ea_1edd78cb1d744015ac3fe61c1e9300e1_f5ee225e7b5f4b3bb15d2bdfd93dd907_master.jpg",
+      "quantity": "11",
+      "description": "Được viết bằng trái tim nhạy cảm, tài quan sát tinh tế, hiểu biết sâu sắc và vốn sống dồi dào, Đất rừng phương Nam là một trong những tác phẩm viết về Nam bộ xuất sắc nhất, làm bật lên trọn vẹn vẻ đẹp con người và thiên nhiên nơi đây. Mỗi lần đọc là mỗi lần tình yêu xứ sở được khơi gợi đến nao lòng.",
+      "category": "Văn học Việt Nam",
+      "sold": 43,
+      "price": "81000"
+    },
+    {
+      "id": "12",
+      "name": "Thám tử lừng danh Conan - Giờ trà của Zero",
+      "img": "https://product.hstatic.net/200000343865/product/gio-tra-cua-zero-tap-1---tb-2022_e9182fd936f54393b1141cefdb90750e_master.jpg",
+      "quantity": "34",
+      "description": "GIỜ TRÀ CỦA ZERO - ZERO'S TEA TIME - Một trong những ngoại truyện đặc sắc về nhân vật Toru Amuro trong \"Thám tử lừng danh Conan\"!!Tuy mới chỉ phát hành vài tập, nhưng nhờ nụ cười tan chảy, cái đầu lạnh và trái tim ấm áp, tác phẩm về cuộc sống thường nhật của anh chàng Amuro tại quán cà phê Poirot đã đốn gục biết bao trái tim của fan mê \"Conan\".  Xin giới thiệu tới các bạn những mẩu chuyện thường ngày chưa ai biết đến về người đàn ông mang trong mình cả ánh sáng lẫn bóng tối, sở hữu 3 bộ mặt: Cảnh sát = Furuya Rei, Thám tử = Amuro Toru, Tổ chức Áo đen = Bourbon.",
+      "category": "Manga",
+      "sold": 7,
+      "price": "35000"
+    },
+    {
+      "id": "13",
+      "name": "Arya bàn bên thỉnh thoảng lại trêu ghẹo tôi bằng tiếng Nga - Tập 4.5",
+      "img": "https://product.hstatic.net/200000343865/product/a-ban-ben-thinh-thoang-lai-treu-gheo-toi-bang-tieng-nga_tap-4-5_bia-ao_9fcc37204df34ded9fdc39740c2de0ff_master.jpg",
+      "quantity": "2",
+      "description": "Chuyến tập huấn mùa hè báo hiệu cho sự khởi đầu của một tình yêu mới. Thế nhưng, mùa hè của nhóm Arya vẫn chưa kết thúc! Thuật thôi miên của Yuki đã biến Masachika trở thành một anh chàng đẹp trai rất cưng chiều người yêu? Màn “va chạm” bất ngờ khiến em gái và cô hầu cận suýt thì ngất xỉu! Ở quán ramen nơi Arya đang tu luyện để ăn món cực cay, có một nhân vật bất ngờ xuất hiện? Arya bị cuốn vào đam mê cho em gái mặc đồ bơi dễ thương của cô chị và trở thành búp bê thử đồ!?",
+      "category": "Light novel",
+      "price": "95000",
+      "sold": 0
+    }
+  ]
+}

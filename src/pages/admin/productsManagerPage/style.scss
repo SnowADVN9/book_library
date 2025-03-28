@@ -1,0 +1,124 @@
+@use "sass:map";
+@import "style/page/all";
+
+.manager {
+    background: #ffffff;
+    border-radius: 8px;
+
+    h2 {
+        margin-right: 30px;
+        color: map.get($theme-colors, "normal_text");
+        position: absolute;
+    }
+    
+    .add_new {
+        position: relative;
+        left: 200px;
+        width: fit-content;
+        padding: 5px;
+        background: #ebebeb;
+
+        a {
+            color: map.get($theme-colors, "main");
+            text-decoration: none;
+        }
+
+        &:hover {
+            background: map.get($theme-colors, "main");
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+
+    &_table {
+        margin-top: 40px;
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+        
+        th, td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        td{
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    color: #ffc107;
+                }    
+            }
+
+            .edit_button {
+                display: inline-block;
+                font-weight: 400;
+                color: #212529;
+                text-align: center;
+                border: 1px solid transparent;
+                padding: .1rem .5rem;
+                margin: .1rem;
+                font-size: 1rem;
+                line-height: 1.5;
+                border-radius: .25rem;
+                color: #fff;
+                background-color: #007bff;
+            }
+
+            .delete_button {
+                display: inline-block;
+                font-weight: 400;
+                color: #212529;
+                text-align: center;
+                border: 1px solid transparent;
+                padding: .1rem .5rem;
+                margin: .1rem;
+                font-size: 1rem;
+                line-height: 1.5;
+                border-radius: .25rem;
+                color: #fff;
+                background-color: #ff3300;
+            }
+    
+        } 
+    }
+
+    &_patination {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    &_page-number{
+        display: flex;
+        gap: 5px;
+    }
+
+    &_page-btn {
+        height: 36px;
+        min-width: 36px;
+        padding: 0 12px;
+        font-size: 14px;
+        color: map.get($theme-colors, "normal_text");
+        background: #ffffff;
+        border: 1px solid #ebebeb;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        :hover:no(&--active) {
+            color: #ffffff;
+            background: map.get($theme-colors, "main");
+        }
+
+        &--active {
+            color: #ffffff;
+            background: map.get($theme-colors, "main");
+            border-color: map.get($theme-colors, "main");
+        }
+    }
+}
