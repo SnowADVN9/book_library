@@ -1,8 +1,7 @@
 @use "sass:map";
 @import "style/page/all";
 
-.addnew {
-        
+.login {
     input {
         width: calc(100% - 10px);
     }
@@ -15,24 +14,17 @@
 
     &_container {
         background: #ffffff;
-        min-width: 900px;
         padding: 32px;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.1);
     }
 
-    &_title{
-        text-align: center;
-
-        h2 {
-            padding: 0 80px;
-            margin-bottom: 24px;
-            font-weight: 600;
-            color: map.get($theme-colors, "normal_text");
-        }
+    &_title {
+        padding: 0 80px;
+        margin-bottom: 24px;
+        font-weight: 600;
+        color: map.get($theme-colors, "normal_text");
     }
-
-
 
     &_form {
         display: flex;
@@ -60,13 +52,11 @@
         background: map.get($theme-colors, "main");
         border-radius: 4px;
         cursor: pointer;
-        border: none;       
-    }
-
-    #description{
-        height: 300px;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-
+        border: none;
+        
+        &:hover {
+            background: #ebebeb;
+            color: map.get($theme-colors,"normal-text");
+        }
     }
 }

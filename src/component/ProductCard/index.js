@@ -14,7 +14,8 @@
                         <img src={img} alt=""></img>
                         <ul className="featured_item_pic_hover">
                             <li>
-                                <AiOutlineEye />
+                                
+                                <Link to={generatePath(ROUTERS.USER.PRODUCT, { id })}><AiOutlineEye /></Link>
                             </li>
                             <li>
                                 <AiOutlineShoppingCart />

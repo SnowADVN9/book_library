@@ -15,13 +15,43 @@
   ],
   "books": [
     {
+      "id": "1",
+      "img": "https://product.hstatic.net/200000343865/product/duoc-su-tu-su_manga-13_bia-ban-pho-thong_a0f7c74285e34be796851d4acabb2053_master.jpg",
+      "name": "Dược sư tự sự - tập 13",
+      "quantity": 33,
+      "sold": 69,
+      "category": "Manga",
+      "description": "Nhâm Thị đã che giấu thân phận để tham gia chuyến đi săn. Hắn và Miêu Miêu gặp tập kích bằng súng hoả mai. Cả hai trốn vào hang động, và ở đó, Miêu Miêu phát hiện ra bí mật của Nhâm Thị. Sau đó, với sự trợ giúp của Lí Bạch, Miêu Miêu bắt giữ được thủ phạm và suy luận về hoàn cảnh phía sau vụ tấn công…!? Khép lại vụ việc, Miêu Miêu trở về với công việc ở hậu cung, nhưng lại được yêu cầu giải mã bí ẩn mới.",
+      "price": 45000
+    },
+    {
       "id": "2",
-      "img": "https://i.postimg.cc/NM8HjJX8/feature-2.jpg",
-      "name": "Chúa tể bóng tối - tập 6",
+      "img": "https://product.hstatic.net/200000343865/product/duoc-su-tu-su_tap-1_83052e050b634d459b16afafacd7945c_master.jpg",
+      "name": "Dược sư tự sự - tập 1",
       "quantity": 6,
       "sold": 69,
       "category": "Manga",
+      "description": "Miêu Miêu là một cô gái làm công việc hầu hạ trong cung đình thời phong kiến. Câu chuyện của chúng ta bắt đầu với việc cô gái từng hành nghề dược sư ở phố hoa này nghe thấy người ta đồn thổi rằng: tất cả những đứa con của Hoàng đế đều đoản mệnh. Bị thúc đẩy bởi niềm khát khao tri thức và tính hiếu kì cố hữu, Miêu Miêu bắt tay vào tìm hiểu nguyên nhân, xem đó như một cách giải khuây không hơn không kém.",
+      "price": 45000
+    },
+    {
+      "id": "3",
+      "img": "https://i.postimg.cc/NM8HjJX8/feature-2.jpg",
+      "name": "Chúa tể bóng tối - tập 6",
+      "quantity": 6,
+      "sold": 6,
+      "category": "Manga",
       "description": "Cậu thiếu niên Cid sau khi chuyển sinh sang một thế giới khác vẫn tiếp tục chơi trò nhập vai Chúa tể Bóng tối, can thiệp vào mọi biến cố và bộc lộ sức mạnh thực sự của mình từ trong màn đêm. Sau khi che giấu thân phận để tham dự Đại hội Bushin – sự kiện lớn hằng năm nhằm tìm ra kiếm sĩ mạnh nhất cả nước, Cid lần lượt giành chiến thắng ở các vòng loại dưới danh nghĩa Jimina Seinen. Mục đích chính của cậu không gì khác ngoài “Một tên tôm tép mà ai cũng khinh bỉ, bỗng vài người nhận ra anh ta có gì đó bất thường. Và khi đại hội diễn ra, chàng trai ấy sẽ cho mọi người chiêm ngưỡng sức mạnh tối thượng”!! Dĩ nhiên, đằng sau Đại hội Bushin ấy cũng đang ẩn chứa không ít mưu mô đen tối thực sự…!?",
+      "price": 50000
+    },
+    {
+      "id": "4",
+      "img": "https://product.hstatic.net/200000343865/product/odd-taxi_tap-5_bia_6f6f187a042b4204a594c035bf5455ec_master.jpg",
+      "name": "Odd taxi - tập 5",
+      "quantity": 16,
+      "sold": 6,
+      "category": "Manga",
+      "description": "Odokawa là một tài xế taxi 41 tuổi độc thân với thói quen nghe hài rakugo qua đài radio để chữa căn bệnh mất ngủ càng lúc càng trầm trọng của mình. Không hiểu vì sao, dạo gần đây chiếc xe của anh đón rước phải khá nhiều vị khách kì lạ: một cậu sinh viên tập tành cách “câu view” trên mạng xã hội, cô y tá ở bệnh viện quen với hành vi mờ ám, một nhóm hài tầm trung đang lục đục nội bộ, các thành viên của một ban nhạc thần tượng mới nổi, hay thậm chí là một tay đầu gấu máu mặt… Những mẩu đối thoại vu vơ giữa Odokawa với họ vô tình lại đều xoay quanh vụ mất tích của một nữ sinh trung học đang là tâm điểm tin tức gần đây. Có nguồn tin cho hay, nữ sinh mất tích ấy đã từng lên taxi của Odokawa nữa.Rốt cuộc, chuyện gì đã xảy ra…?",
       "price": 50000
     },
     {
@@ -113,6 +143,22 @@
       "category": "Light novel",
       "price": "95000",
       "sold": 0
+    }
+  ],
+  "users": [
+    {
+      "email": "van@gmail.com",
+      "password": "$2a$10$9ryXbHHnLeZplrhmqzRnCeG8dns2hIkuotcf3qB8t/af.b9Da1rAu",
+      "name": "Đỗ Thành Văn",
+      "id": 1,
+      "type": "admin"
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$9ryXbHHnLeZplrhmqzRnCeG8dns2hIkuotcf3qB8t/af.b9Da1rAu",
+      "name": "Nguyễn Thị B",
+      "id": 2,
+      "type": "user"
     }
   ]
 }

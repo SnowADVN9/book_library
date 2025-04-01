@@ -15,10 +15,12 @@ import useCategories from "hooks/useCategories";
 
 const Header = () => {
     const navigate = useNavigate();
-    const location = useLocation()
+    const location = useLocation();
     const [isHome, setIsHome] = useState(location.pathname.length <= 1);
-    const [isShowCategories, setShowCategoties] = useState(false);
-    const[menus] = useState([
+    const [isShowCategories, setShowCategories] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const menus = [
         {
             name: "Trang chủ",
             path: ROUTERS.USER.HOME
@@ -54,16 +56,21 @@ const Header = () => {
             name: "Liên hệ",
             path: ""
         }
-
-    ]);
+    ];
 
     const { categories } = useCategories();
 
-    useEffect(() =>{
+    useEffect(() => {
         const isHome = location.pathname.length <= 1;
         setIsHome(isHome);
-        setShowCategoties(isHome);
-    }, [location])
+        setShowCategories(isHome);
+        setIsLoggedIn(localStorage.getItem("accessToken") !== null);
+    }, [location]);
+
+    const handleLogout = () => {
+        localStorage.removeItem("accessToken");
+        setIsLoggedIn(false);
+    };
 
     return (
         <>
@@ -77,7 +84,7 @@ const Header = () => {
                             </ul>
                         </div>
                         <div className="col-6 header_top_right">
-                            <div >
+                            <div>
                                 <ul>
                                     <li>
                                         <Link to={""}>
@@ -94,9 +101,15 @@ const Header = () => {
                                             <AiOutlineUser />
                                         </Link>
                                     </li>
-                                    <li onClick={() =>navigate(ROUTERS.ADMIN.LOGIN)}>
-                                        <span>Đăng nhập</span>
-                                    </li>
+                                    {!isLoggedIn ? (
+                                        <li onClick={() => navigate(ROUTERS.USER.LOGIN)}>
+                                            <span>Đăng nhập</span>
+                                        </li>
+                                    ) : (
+                                        <li onClick={handleLogout}>
+                                            <span>Đăng xuất</span>
+                                        </li>
+                                    )}
                                 </ul>
                             </div>
                         </div>
@@ -108,36 +121,33 @@ const Header = () => {
                 <div className="row">
                     <div className="col-xl-3">
                         <div className="header_logo">
-                            <h1>CHiCO BOOK</h1>    
-                        </div>    
+                            <h1>CHiCO BOOK</h1>
+                        </div>
                     </div>
                     <div className="col-xl-6">
                         <nav className="header_menu">
                             <ul>
-                                {
-                                    menus?.map((menu, menuKey) => (
-                                        <li key={menuKey} className={menuKey === 0 ? "active":""}>
-                                            <Link to={menu?.path}>{menu?.name}</Link>
-                                            {menu.child && (
-                                                <ul className="header_menu_dropdown">
-                                                    {menu.child.map((childItem, childKey) => (
-                                                        <li key={`${menuKey}-${childKey}`}>
-                                                            <Link to={childItem.path}>{childItem.name}</Link>
-                                                        </li>
-                                                    ))}
-
-                                                </ul>
-                                            )}
-                                        </li>
-                                    ))
-                                }
-                            </ul>    
+                                {menus?.map((menu, menuKey) => (
+                                    <li key={menuKey} className={menuKey === 0 ? "active" : ""}>
+                                        <Link to={menu?.path}>{menu?.name}</Link>
+                                        {menu.child && (
+                                            <ul className="header_menu_dropdown">
+                                                {menu.child.map((childItem, childKey) => (
+                                                    <li key={`${menuKey}-${childKey}`}>
+                                                        <Link to={childItem.path}>{childItem.name}</Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
                         </nav>
                     </div>
                     <div className="col-xl-3">
-                        <div className = "header_cart">
+                        <div className="header_cart">
                             <div className="header-cart-price">
-                                 <span>{formatter(1001230)}</span>
+                                <span>{formatter(1001230)}</span>
                             </div>
                             <ul>
                                 <li>
@@ -154,9 +164,9 @@ const Header = () => {
             <div className="container">
                 <div className="row hero_categories_container">
                     <div className="col-lg-3 hero_categories">
-                        <div className="hero_categories_all" onClick={() => setShowCategoties(!isShowCategories)}>
+                        <div className="hero_categories_all" onClick={() => setShowCategories(!isShowCategories)}>
                             <AiOutlineMenu />
-                            <span> Danh sách sản phẩm</span>
+                            <span>Danh sách sản phẩm</span>
                         </div>
                         <ul className={isShowCategories ? "" : "hidden"}>
                             {categories.map((category) => (
@@ -166,8 +176,7 @@ const Header = () => {
                                     </Link>
                                 </li>
                             ))}
-
-                        </ul>       
+                        </ul>
                     </div>
                     <div className="col-lg-9 hero_search_container">
                         <div className="hero_search">
@@ -177,7 +186,7 @@ const Header = () => {
                                     <button type="submit" className="site-btn">Tìm kiếm</button>
                                 </form>
                             </div>
-                            
+
                             <div className="hero_search_phone">
                                 <div className="hero_search_phone_icon">
                                     <AiOutlinePhone />
@@ -187,18 +196,14 @@ const Header = () => {
                                     <p>0364.006.304</p>
                                     <span>Hỗ trợ 24/7</span>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
-                        {
-                            isHome && (<div className="hero_banner"></div>)
-                            
-                        }
-                        
+                        {isHome && (<div className="hero_banner"></div>)}
                     </div>
                 </div>
             </div>
-        </>    
-    )
-}
+        </>
+    );
+};
 
-export default memo( Header );
+export default memo(Header);

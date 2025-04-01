@@ -1,43 +1,38 @@
 import { memo } from "react";
 import "./style.scss";
-import { formatter } from "utils/fomater";
-import useBooks from "hooks/useBooks";
 import { generatePath, Link } from "react-router-dom";
 import { ROUTERS } from "utils/router";
-import bookApi from "api/bookApi";
+import useCategories from "hooks/useCategories";
+import categoriesApi from "api/categoriesApi";
 
-const ProductsManagerPageAdmin = () => {
-    const { books } = useBooks();
+const CategoriesManagerPageAdmin = () => {
+    const { categories } = useCategories();
     const handleDelete = (id) => {
         const confim = window.confirm("Bạn có muốn xóa sản phẩm này không?");
         if (confim) {
-            bookApi.deleteBook(id);
+            categoriesApi.deleteCategory(id);
         }
     }
 
     return (
         <div className="container">
             <div className="manager">
-                <h2>Quản lý sản phẩm</h2>
+                <h2>Quản lý danh mục</h2>
                 <div className="add_new">
-                    <Link to={ROUTERS.ADMIN.ADDNEWPRODUCT}>Thêm sản phẩm</Link>
+                    <Link to={ROUTERS.ADMIN.ADDNEWCATEGORY}>Thêm danh mục</Link>
                 </div>
                 <div className="manager_content">
                     <table className="manager_table">
                         <thead>
                             <tr>
-                                <th>Mã sản phẩm</th>
-                                <th>Tên sản phẩm</th>
-                                <th>Thể loại</th>
-                                <th>Giá</th>
-                                <th>Số lượng còn lại</th>
-                                <th>Đã bán</th>
+                                <th>Mã danh mục</th>
+                                <th>Tên danh mục</th>
                                 <th>Hành động</th>
                             </tr>
                         
                         </thead>
                         <tbody>
-                            {books.map((item) => (
+                            {categories.map((item) => (
                                 <tr key={item.id}>
                                     <td>
                                         <span>{item.id}</span>
@@ -46,19 +41,7 @@ const ProductsManagerPageAdmin = () => {
                                         <span>{item.name}</span>
                                     </td>
                                     <td>
-                                        <span>{item.category}</span>
-                                    </td>
-                                    <td>
-                                        <span>{formatter(item.price)}</span>
-                                    </td>
-                                    <td>
-                                        <span>{item.quantity}</span>
-                                    </td>
-                                    <td>
-                                        <span>{item.sold}</span>
-                                    </td>
-                                    <td>
-                                        <Link to={generatePath(ROUTERS.ADMIN.EDITPRODUCT, { id: item.id })} className="edit_button">Sửa</Link>
+                                        <Link to={generatePath(ROUTERS.ADMIN.EDITCATEGORY, { id: item.id })} className="edit_button">Sửa</Link>
                                         <button className="delete_button" onClick={e => handleDelete(item.id)}>Xóa</button>
                                     </td>
                                 </tr>
@@ -88,4 +71,4 @@ const ProductsManagerPageAdmin = () => {
 
 };
 
-export default memo( ProductsManagerPageAdmin );
+export default memo( CategoriesManagerPageAdmin );

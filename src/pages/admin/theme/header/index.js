@@ -9,9 +9,16 @@ const HeaderAd = ({ children, ...props }) => {
     const navigate = useNavigate();
     const navItems = [
         {
-            path: ROUTERS.ADMIN.MANAGER,
-            onclick: () => navigate(ROUTERS.ADMIN.MANAGER),
+            path: ROUTERS.ADMIN.MANAGERPRODUCT,
+            onclick: () => navigate(ROUTERS.ADMIN.MANAGERPRODUCT),
             label:"Sản phẩm",
+            icon: <AiOutlineBook />
+        },
+
+        {
+            path: ROUTERS.ADMIN.MANAGERCATEGORIES,
+            onclick: () => navigate(ROUTERS.ADMIN.MANAGERCATEGORIES),
+            label:"Danh mục",
             icon: <AiOutlineBook />
         },
 
@@ -34,7 +41,7 @@ const HeaderAd = ({ children, ...props }) => {
                                     ? "admin_header_nav-item--active"
                                     :""
                             }`}
-                            onclick={onclick}    
+                            onClick={onclick}
                         >
                             <span className="admin_header_nav-icon">{icon}</span>
                             <span>{label}</span>

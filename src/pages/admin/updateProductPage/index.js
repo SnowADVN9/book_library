@@ -39,7 +39,7 @@ function UpdateProduct() {
         e.preventDefault();
         try {
             await bookApi.updateBook(id, data);
-            navigate(ROUTERS.ADMIN.MANAGER);
+            navigate(ROUTERS.ADMIN.MANAGERPRODUCT);
         } catch (err) {
             console.error("Failed to update book: ", err);
         }
@@ -64,7 +64,7 @@ function UpdateProduct() {
                     </div>
                     <div className="update_form-group">
                         <label htmlFor="description">Description</label>
-                        <input type="text" id="description" value={data.description} onChange={handleChange} />
+                        <textarea rows="5" cols="50" id="description" value={data.description} onChange={handleChange} />
                     </div>
                     <div className="update_form-group">
                         <label htmlFor="category">Category</label>

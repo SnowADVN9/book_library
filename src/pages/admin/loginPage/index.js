@@ -8,7 +8,7 @@ const LoginAdPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefaut();
-        navigate(ROUTERS.ADMIN.MANAGER);
+        navigate(ROUTERS.ADMIN.MANAGERPRODUCT);
     }
 
     return (

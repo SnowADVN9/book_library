@@ -6,13 +6,18 @@ export const ROUTERS = {
         PROFILE: "tai-khoan",
         PRODUCTS: "/san-pham",
         PRODUCT: "/san-pham/chi-tiet/:id",
+        LOGIN: "/dang-nhap",
+        SIGNUP: "/dang-ky-tai-khoan",
     },
 
     ADMIN: {
         LOGIN: `/${ADMIN_PATH}dang-nhap`,
-        MANAGER: `/${ADMIN_PATH}quan-ly-san-pham`,
+        MANAGERPRODUCT: `/${ADMIN_PATH}quan-ly-san-pham`,
+        MANAGERCATEGORIES: `/${ADMIN_PATH}quan-ly-danh-muc`,
+        ADDNEWCATEGORY : `/${ADMIN_PATH}them-danh-muc`,
+        EDITCATEGORY: `/${ADMIN_PATH}sua-danh-muc/:id`,
         LOGOUT: `/${ADMIN_PATH}dang-xuat`,
-        ADDNEW: `/${ADMIN_PATH}them-san-pham`,
-        EDIT: `/${ADMIN_PATH}sua/:id`,
+        ADDNEWPRODUCT: `/${ADMIN_PATH}them-san-pham`,
+        EDITPRODUCT: `/${ADMIN_PATH}sua-san-pham/:id`,
     } 
 }

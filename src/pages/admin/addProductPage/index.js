@@ -43,7 +43,7 @@ function AddProduct() {
         e.preventDefault();
         try {
             await bookApi.addBook(data);
-            navigate(ROUTERS.ADMIN.MANAGER);
+            navigate(ROUTERS.ADMIN.MANAGERPRODUCT);
         } catch (err) {
             console.error("Failed to add book: ", err);
         }
@@ -52,30 +52,30 @@ function AddProduct() {
     return (
         <div className="addnew">
             <div className="addnew_container">
-                <h2 className="addnew_title">Add Product</h2>  
+                <h2 className="addnew_title">Thêm sản phẩm</h2>  
                 <form className="addnew_form" onSubmit={handleSubmit}>
                     <div className="addnew_form-group">
-                        <label htmlFor="name">Product Name</label>
+                        <label htmlFor="name">Tên sản phẩm</label>
                         <input type="text" id="name" value={data.name} onChange={handleChange} />
                     </div>
                     <div className="addnew_form-group">
-                        <label htmlFor="img">Image</label>
+                        <label htmlFor="img">Hình ảnh</label>
                         <input type="text" id="img" value={data.img} onChange={handleChange} />
                     </div>
                     <div className="addnew_form-group">
-                        <label htmlFor="quantity">Quantity</label>
+                        <label htmlFor="quantity">Số lượng</label>
                         <input type="number" id="quantity" min="0" value={data.quantity} onChange={handleChange} />
                     </div>
                     <div className="addnew_form-group">
-                        <label htmlFor="description">Description</label>
-                        <input type="text" id="description" value={data.description} onChange={handleChange} />
+                        <label htmlFor="description">Mô tả</label>
+                        <textarea rows="5" cols="50" id="description" value={data.description} onChange={handleChange} />
                     </div>
                     <div className="addnew_form-group">
-                        <label htmlFor="category">Category</label>
+                        <label htmlFor="category">Danh mục</label>
                         <input type="text" id="category" value={data.category} onChange={handleChange} />
                     </div>
                     <div className="addnew_form-group">
-                        <label htmlFor="price">Price</label>
+                        <label htmlFor="price">Giá</label>
                         <input type="number" id="price" min="0" value={data.price} onChange={handleChange} />
                     </div>
                     <button type="submit" className="addnew_button">Add</button>

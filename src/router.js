@@ -10,6 +10,11 @@ import ProductsManagerPageAdmin from "pages/admin/productsManagerPage";
 import MasterAdLayout from "pages/admin/theme/masterAdLayout";
 import AddProductPage from "pages/admin/addProductPage";
 import UpdateProductPage from "pages/admin/updateProductPage";
+import CategoriesManagerPage from "pages/admin/categoriesManagerPage";
+import AddCategoryPage from "pages/admin/addCategoryPage";
+import UpdateCategoryPage from "pages/admin/updateCategoryPage";
+import SignupPage from "pages/users/signupPage";
+import LoginUserPage from "pages/common/loginPage";
 
 const renderUserRouter = () => {
     const userRouters = [
@@ -29,6 +34,15 @@ const renderUserRouter = () => {
             path: ROUTERS.USER.PRODUCT,
             component: <ProductDetailPage />
         },
+        {
+            path: ROUTERS.USER.SIGNUP,
+            component: <SignupPage />
+        },
+        {
+            path: ROUTERS.USER.LOGIN,
+            component: <LoginUserPage />
+        },
+        
     ];
 
     return (
@@ -49,20 +63,33 @@ const renderAdminRouter = () => {
             component: <LoginAdPage />
         },
         {
-            path: ROUTERS.ADMIN.MANAGER,
+            path: ROUTERS.ADMIN.MANAGERPRODUCT,
             component: <ProductsManagerPageAdmin />
         },
+        {
+            path: ROUTERS.ADMIN.MANAGERCATEGORIES,
+            component: <CategoriesManagerPage />
+        },
+        
         {
             path: ROUTERS.ADMIN.LOGOUT,
             component: <ProductsManagerPageAdmin />
         },
         {
-            path: ROUTERS.ADMIN.ADDNEW,
+            path: ROUTERS.ADMIN.ADDNEWPRODUCT,
             component: <AddProductPage />
         },        
         {
-            path: ROUTERS.ADMIN.EDIT,
+            path: ROUTERS.ADMIN.EDITPRODUCT,
             component: <UpdateProductPage />
+        },    
+        {
+            path: ROUTERS.ADMIN.ADDNEWCATEGORY,
+            component: <AddCategoryPage />
+        },    
+        {
+            path: ROUTERS.ADMIN.EDITCATEGORY,
+            component: <UpdateCategoryPage />
         },        
     ]
 

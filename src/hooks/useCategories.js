@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
 import categoriesApi from "../api/categoriesApi";
 
-const useCategories = ({ name = null } = {}) => {
+const useCategories = ({id = null, name = null } = {}) => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 let response;
-                if (name) {
+                if (id) {
+                    response = await categoriesApi.getById(id);
+                } 
+                else if (name) {
                     response = await categoriesApi.getByName(name);
                 } else {
                     response = await categoriesApi.getAll();
@@ -21,7 +24,7 @@ const useCategories = ({ name = null } = {}) => {
         };
 
         fetchData();
-    }, [name]);
+    }, [id, name]);
 
     return { categories };
 };
